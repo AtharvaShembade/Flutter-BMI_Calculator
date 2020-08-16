@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'input_page.dart';
+import 'screens/input_page.dart';
+import 'screens/results_page.dart';
+import 'package:bmi_calculator/calculator_brain.dart';
 
 void main() => runApp(BMICalculator());
 
@@ -12,7 +14,11 @@ class BMICalculator extends StatelessWidget {
           primaryColor: Color(0xFF0A0E21),
           scaffoldBackgroundColor: Color(0xFF0A0E21),
       ),
-      home: InputPage(),
+      initialRoute: '/Input',
+      routes: {
+        '/Input': (context) => InputPage(),
+        //'/Results': (context) => ResultsPage(),
+      },
     );
   }
 }
